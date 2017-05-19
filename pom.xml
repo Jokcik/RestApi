@@ -7,6 +7,56 @@
     <groupId>RestApi</groupId>
     <artifactId>RestApi</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <spring-core.version>4.3.8.RELEASE</spring-core.version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <spring-data-jpa.version>1.11.3.RELEASE</spring-data-jpa.version>
+        <hibernate-entitymanager.version>5.2.10.Final</hibernate-entitymanager.version>
+        <mssql-jdbc.version>6.1.7.jre8-preview</mssql-jdbc.version>
+        <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
+    </properties>
+    <packaging>war</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-core.version}</version>
+        </dependency>
 
+        <!-- Web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
+        </dependency>
+
+        <!-- DataBase -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring-data-jpa.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate-entitymanager.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>${mssql-jdbc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>${commons-dbcp2.version}</version>
+        </dependency>
+
+    </dependencies>
 </project>
