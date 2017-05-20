@@ -15,6 +15,8 @@
         <hibernate-entitymanager.version>5.2.10.Final</hibernate-entitymanager.version>
         <mssql-jdbc.version>6.1.7.jre8-preview</mssql-jdbc.version>
         <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
+        <jackson-databind.version>2.9.0.pr3</jackson-databind.version>
+        <gson.version>2.8.0</gson.version>
     </properties>
     <packaging>war</packaging>
 
@@ -24,6 +26,14 @@
             <artifactId>spring-core</artifactId>
             <version>${spring-core.version}</version>
         </dependency>
+
+        <!-- JSON -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+
 
         <!-- Web -->
         <dependency>
