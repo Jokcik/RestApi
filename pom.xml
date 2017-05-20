@@ -7,6 +7,7 @@
     <groupId>RestApi</groupId>
     <artifactId>RestApi</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <properties>
         <spring-core.version>4.3.8.RELEASE</spring-core.version>
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
@@ -46,6 +47,12 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${hibernate-entitymanager.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.transaction/jta -->
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
         </dependency>
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
