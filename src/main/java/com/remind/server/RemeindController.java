@@ -1,26 +1,32 @@
 package com.remind.server;
 
 import com.remind.entity.Speciality;
+import com.remind.repository.SpecialityRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by User on 19.05.2017.
  */
 @RestController
-@RequestMapping("/remeind")
+@RequestMapping("/api")
 public class RemeindController {
 
-    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @Autowired
+    private SpecialityRepository specialityRepository;
+
+    @RequestMapping(value = "/specialities", method = RequestMethod.GET)
     @ResponseBody
-    public Speciality method() {
-        return createMockSpeciality();
+    public List<Speciality> getAllSpecialises() {
+        return specialityRepository.findAll();
     }
 
-    private Speciality createMockSpeciality() {
-        return new Speciality(1, "fafasd");
+    @RequestMapping(value = "/specialities", method = RequestMethod.POST)
+    @ResponseBody
+    public Speciality getAllSpecialises(@RequestBody Speciality speciality) {
+        return specialityRepository.saveAndFlush(speciality);
     }
 }
