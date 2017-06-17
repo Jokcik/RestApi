@@ -1,10 +1,12 @@
 package com.remind.entity;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Created by User on 19.05.2017.
  */
+@XmlRootElement
 @Entity
 @Table(name = "speciality")
 public class Speciality {
